@@ -46,6 +46,7 @@ A telepítés után a **Git Bash** terminálban lehet használni a git eszközö
 #### Linux
 
 Írd be a terminálba:
+
 ```
 $ sudo apt install git
 ```
@@ -53,18 +54,28 @@ $ sudo apt install git
 #### Mac
 
 Az Xcode telepítésével a git is felkerül a gépre. Próbáld ki.
+
 ```
 git --version
 ```
 
 Ha nem találja a parancsot, telepítsd az Xcode-ot, vagy csak a gitet a weboldalról: https://git-scm.com/downloads
 
+### Névjegy beállítása
+
+A git a tevékenységedet egy névvel és egy email címmel írja alá. Általában a tényleges nevünket szoktuk megadni.
+
+```bash
+$ git config --global user.name "Mona Lisa"
+$ git config --global user.email "email@example.com"
+```
+
 ## Alapok
 
 A git egyik alapfogalma a **commit**. A commit tulajdonképpen egy ,,mentés'' gomb. A projektünk aktuális állapotáról készít egy pillanatfelvételt és azt eltárolja. Egy adott commithoz bármikor visszatárhetünk. A commit az előző commit óta végzett változásokat menti el.
 
 A commitok tehát egy gráfon ábrázolva így néznek ki:
-```
+```bash
 A---B---C---D---E---F
 ```
 
@@ -83,6 +94,7 @@ A---B---C---D---E---F master
 ### Repository készítése
 
 Egy új repository indításához ennyit kell beírnunk a parancssorba:
+
 ```
 $ git init
 Initialized empty Git repository in /home/levente/Dev/sandbox/git-proba/.git/
@@ -98,18 +110,21 @@ Az induláshoz nincs szükségünk semmilyen fájlra, de egy README fájlt szok�
 ### Status
 
 Készítsünk pár fájlt a mappánkban.
-```
+
+```bash
 $ echo "print('Hello')" >> Hello.py
 $ echo "print('Goodbye')" >> Goodbye.py
 ```
 
 Gyorsan megnézhetjük a mappánk tartalmát az `ls` paranccsal.
+
 ```
 $ ls
 Goodbye.py  Hello.py  README.md
 ```
 
 Nézzük meg a fájlok állapotát a `git status` parancs segítségével!
+
 ```
 $ git status
 On branch master
@@ -134,11 +149,13 @@ Ez elég sok infót közöl velünk:
 ### Staging
 
 A fájlokat szeretnénk hozzáadni a következő commithoz. Erre az `git add` parancs szolgál, így kell használni:
+
 ```
 $ git add Hello.py Goodbye.py
 ```
 
 Nézzük meg újra a státuszt!
+
 ```
 $ git status
 On branch master
@@ -158,21 +175,42 @@ Látjuk, hogy a változásaink benne lesznek a következő commitban. Azt a kör
 ### Commit
 
 A staging környezetben lévő fájlokat lementhetjük a `git commit` paranccsal.
+
 ```
 $ git commit
 ```
 
-Minden commit tartalmaz egy megjegyzést (**commit message**), ami tömören összefoglalja a változások célját. A következő igékkel szokás kezdeni: **Add**, **Update**, **Remove**, **Refactor**, **Fix**; ezután pedig a módosított dolgokat foglald össze.  
+Minden commit tartalmaz egy üzenetet (**commit message**), ami tömören összefoglalja a változások célját. A következő igékkel szokás kezdeni: Add, Update, Remove, Refactor, Optimize, Fix. Ezután pedig a módosított dolgokat foglald össze.  
 Példa: "Add Hello script".
 
-A `git commit` parancs megnyit egy szövegszerkesztőt (általában a **nano** editort). A megnyíló fájl kommentként tartalmazza a megváltoztatott fájlok nevét. A felső sorba írjuk be a megjegyzésünket: "Add Hello and Goodbye scripts". Mentsük (**Ctrl+S**), majd zárjuk be a szerkesztőt (**Ctrl+X**).
+A `git commit` parancs megnyit egy szövegszerkesztőt (általában a **nano** editort). A megnyíló fájl kommentként tartalmazza a megváltoztatott fájlok nevét. A felső sorba írjuk be az üzenetet: "Add Hello and Goodbye scripts". Mentsük (**Ctrl+S**), majd zárjuk be a szerkesztőt (**Ctrl+X**).
 
 A commit elkészült, egy hasonló összegzést láthatunk a terminálablakban:
+
 ```
 [master (root-commit) 99dd3d3] Initial commit
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 Goodbye.py
  create mode 100644 Hello.py
+```
+
+Az üzenetet a parancssorban is megadhatjuk:
+
+```bash
+$ git commit -m "Update Hello script"
+```
+
+### Log
+
+Az eddigi commitjainkat a `git log` parancs mutatja meg:
+
+```
+$ git log
+commit af14db18e222d63b5aa2df167c788c4932d91e82 (HEAD -> master)
+Author: leventerevesz <levete.revesz@gmail.com>
+Date:   Fri Oct 4 09:51:52 2019 +0200
+
+    Add Hello and Goodbye scripts
 ```
 
 ### Diff
@@ -191,6 +229,13 @@ Módosítsunk az egyik fájlon!
 ## Távoli repository használata
 
 GitHub és GitLab
+
+### Origin beállítása
+
+```bash
+$ git remote add origin https://github.com/user/repo.git
+$ git push -u origin master
+```
 
 ### Clone
 
