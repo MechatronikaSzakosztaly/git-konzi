@@ -135,7 +135,7 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
 	Hello.py
-    Goodbye.py
+	Goodbye.py
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -188,7 +188,7 @@ A `git commit` parancs megnyit egy szövegszerkesztőt (általában a **nano** e
 A commit elkészült, egy hasonló összegzést láthatunk a terminálablakban:
 
 ```
-[master (root-commit) 99dd3d3] Initial commit
+[master (root-commit) 99dd3d3] Add Hello and Goodbye scripts
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 Goodbye.py
  create mode 100644 Hello.py
