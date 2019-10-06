@@ -16,7 +16,7 @@ NAME
        git - the stupid content tracker
 ```
 
-A név valószínűleg nem jelentett semmit, valószínűleg azért lett git, mert a _get_ szóra kicsit hasonlít, és még nem volt ilyen UNIX parancs.
+A név valószínűleg nem jelentett semmit, talán azért lett git, mert a _get_ szóra kicsit hasonlít, és még nem volt ilyen UNIX parancs.
 
 
 ## A git jellemzői
