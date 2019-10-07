@@ -22,12 +22,12 @@ A név valószínűleg nem jelentett semmit, talán azért lett git, mert a _get
 ## A git jellemzői
 
 **Elosztott**:
-A felépítése nem kliens-szerver jellegű, hanem minden git mappa egy teljes értékű repository, amelyből lehet leölteni, feltölteni.
+A felépítése nem kliens-szerver jellegű, hanem minden git mappa egy teljes értékű repository, amelyből lehet letölteni, feltölteni.
 
 **Free and Open Source Software (FOSS)**:
 A git a Linux világból ismert *GNU General Public License V2* alatt terjesztett szoftver, azaz szabadon felhasználható, sosem lesz fizetős.
 
-**Népszerű**
+**Népszerű**:
 A git használata egyszerű, logikus, könnyen elsajátítható. Ez a legnépszerűbb verziókezelő.
 
 ---
@@ -292,7 +292,7 @@ $ git reset --hard
 
 ### Branch készítés, váltás
 
-Új branchet a `git branch` paranccsal hozhatunk létre. Ennek alapja a legutóbbi commit lesz, és a lokális módosításaink (amiket még nem committeltünk) is átkerülnek bele. 
+Új branchet a `git branch` paranccsal hozhatunk létre. Ennek alapja a legutóbbi commit lesz, és a lokális módosításaink (amiket még nem commiteltünk) is átkerülnek bele. 
 
 Ágakat használunk a fejlesztési folyamatok elkülönítésére. A program minden új funkcióját egy külön ágban kezdjük el, így a master ágban mindig egy működő verzió lehet, amiből kollégáink saját mellékágakat indíthatnak a mi félkész kódunktól függetlenül. De egyszemélyes fejlesztés esetén is érdemes külön ágakban fejleszteni a különböző funkciókat.
 
@@ -331,7 +331,7 @@ $ git branch
 * mellekag
 ```
 
-Ágak közötti váltás előtt érdemes committálni minden lokális változást, vagy hard resetelni őket, ha nincs rájuk szükség.
+Ágak közötti váltás előtt érdemes commitelni minden lokális változást, vagy hard resetelni őket, ha nincs rájuk szükség.
 
 ### Stash
 
