@@ -405,17 +405,16 @@ Ahhoz, hogy belekezdjünk a munkába, meg kell szereznünk a repot, git initeln�
 $ git clone https://github.com/user/repo.git
 ```
 
-#### Add remote, add upstream
+#### Add remote, set upstream
 
 Ha megvannak a fájlok, de nem clone-al szereztétek meg őket, másféleképpen kell összekötni őket a GitHubon tárolt verzióval: "cd"-zzetek be a repo mappájába, és ott mondjátok meg a gitnek, hogy csináljon nektek egy új repo-t, majd adjátok meg a repo URL-jét (ezt a github Clone/Download fülén találhatjátok meg).
 
 ```bash
 $ git init
 $ git remote add origin https://github.com/user/repo.git
-$ git push -u origin master
-$ git remote add origin https://github.com/user/repo.git
+$ git push --set-upstream origin master
 ```
-Mostmár tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne.
+Most már tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne.
 
 
 #### Munka a letöltött fájlokon
