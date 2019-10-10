@@ -86,3 +86,12 @@ Gráfon:
          /
 A---B---C---D---E---F master
 ```
+
+# Környezetek
+
+```
++-----------+       +---------+          +------------+
+|  Working  |       | Staging |          | Repository |
+| Directory | add-> | (Index) | commit-> |            |
++-----------+       +---------+          +------------+
+```
