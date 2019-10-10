@@ -1,4 +1,4 @@
-# Git kezdőknek
+# Git egylet
 
 ## Mire jó a verziókezelő?
 
@@ -395,16 +395,34 @@ Kétféleképpen lehet használni ezeket: dolgozhattok egy olyan csapattal, akik
 
 ### Csapatos munka a GitHubon
 
-Amikor csapatban dolgozunk, akkor mindenki rendelkezik olyan jogokkal, ami lehetővé teszi, hogy úgy kezeld a repositoryt, mintha a sajátod lenne. Tegyük fel, hogy egy projektbe szeretnénk bekapcsolódni, de nem mi kezdtük el írni, úgyhogy szeretnénk először letölteni az eddigi fájlokat. Azért, hogy követni tudjuk a többiek változtatásait is, ne csak a sajátjainkat, nem elég letölteni: meg is kell adni, hogy
+Amikor csapatban dolgozunk, akkor mindenki rendelkezik olyan jogokkal, ami lehetővé teszi, hogy úgy kezeld a repositoryt, mintha a sajátod lenne. Tegyük fel, hogy egy projektbe szeretnénk bekapcsolódni, de nem mi kezdtük el írni, úgyhogy szeretnénk először letölteni az eddigi fájlokat. Azért, hogy követni tudjuk a többiek változtatásait is, és szinkronizálni tudjuk a sajátjainkat, nem elég letölteni: meg is kell adni, hogy melyik repo-val dolgozunk. Ezt nevezi a git upstream branchnak. 
 
-#### Clone
+#### Add remote, add upstream
+
+"cd"-zzetek be a repo mappájába, és ott mondjátok meg a gitnek, hogy csináljon nektek egy új repo-t, majd adjátok meg a repo URL-jét (ezt a github Clone/Download fülén találhatjátok meg).
 
 ```bash
+$ git init
 $ git remote add origin https://github.com/user/repo.git
 $ git push -u origin master
+$ git remote add origin https://github.com/user/repo.git
+```
+Mostmár tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne. De a fájlok még nincsenek meg! A Clone parancs szedi össze őket nekünk.
+
+#### Clone
+```bash
+$ git clone https://github.com/user/repo.git
 ```
 
-### Clone
+
+Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlok másolatát. El is kezdhetünk dolgozni! Előtte érdemes megcsinálni a branchot, ami a változtatásainkat tartalmazni fogja.
+
+
+ A verziókövető figyelni fog minket; ha menteni szeretnénk a vál
+
+
+
+
 
 ### Pull
 
