@@ -417,6 +417,22 @@ $ git push --set-upstream origin master
 Most már tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne.
 
 
+#### Pull
+
+Ha a klónozás óta az upstreamben változások történtek, azokat szinkronizálhatjuk a saját lokális águnkba is. Erre szolgál a **pull** parancs. A pull merge-eli az upstream ágat a lokális águnkba, ezáltal az összes változás megjelenik a mi számítógépünkön is.
+
+```bash
+$ git pull
+```
+
+#### Push
+
+A saját változtatásaink szikronizálását a **push** parancs végzi. A lokális águnkat merge-eli az upstream ágba, így a változtatásaink megjelennek az upstreamben is. Ha az upstreamben még nem létezik az ág, amit push-olunk, automatikusan készül egy.
+
+```bash
+$ git push
+```
+
 #### Munka a letöltött fájlokon
 
 Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlok másolatát egy új mappán belül, aminek a neve megegyezik a repo-val. El is kezdhetünk dolgozni! Előtte érdemes megcsinálni a branchot, ami a változtatásainkat tartalmazni fogja.
@@ -444,14 +460,6 @@ $ git push
 ```
 
 Frissítés után meg is jelent egy új branch a repoban: ebben már ott vannak a saját változtatásaink.
-
-#### Pull
-
-Ha a branchünkben valamit frissíteni szeretnénk egy másik branchből, akkor használhatjuk a **pull** parancsot. Ez megkeresi az eltéréseket, és automatikusan merge-eli a két ágat. Ezt megtehetjük akkor, ha valami hozzájárult a masterhez, így megváltozott a mi  a GitHubon tárolt verzió, de a miénk nem. 
-
-```bash
-$ git pull https://github.com/user/repo.git
-```
 
 #### Pull requestek, majd merge
 
