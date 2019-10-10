@@ -346,7 +346,7 @@ $ git stash
 Módosítások félrerakása, és visszatérés a legutóbbi commithoz.
 
 ```bash
-$ gut stash push
+$ git stash push
 ```
 
 Módosítások visszatöltése
