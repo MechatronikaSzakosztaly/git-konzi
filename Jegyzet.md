@@ -451,10 +451,12 @@ Láttunk, hogy csapatban együtt dolgozva mindenki merge-elhet, akinek csak kedv
 
 #### Fork
 
-Ahhoz, hogy egy nyílt forráskódú projekttel szabadon játszhassuk, forkolnunk kell a projekt repo-ját. A forkolás lehetővé teszi, hogy úgy commitolgassunk, hogy az ne jelenjen meg az eredeti projektben. Ilyenkor egyedül összerakjuk a dolgokat, majd egy pull reqestet küldönk az eredeti repo tulajának, aki eldönthati, hogy használja-e a kódunkat, és mergel, vagy nem. Ha rányomtok a Forkra, megjelenik a saját GitHub oldalatokon is a projekt. asdasd
+Ahhoz, hogy egy nyílt forráskódú projekttel szabadon játszhassuk, forkolnunk kell a projekt repo-ját. A forkolás lehetővé teszi, hogy úgy commitolgassunk, hogy az ne jelenjen meg az eredeti projektben. Ilyenkor egyedül összerakjuk a dolgokat, majd egy pull reqestet küldönk az eredeti repo tulajának, aki eldönthati, hogy használja-e a kódunkat, és mergel, vagy nem. Ha rányomtok a Forkra, megjelenik a saját GitHub oldalatokon is a projekt.
 
+#### Pull request fork után
 
+Ha úgy érzitek, készen álltok a közös projekt frissítésére, commitoljátok minden változtatásotokat a saját repotokba, majd eresszetek meg egy pull reqestet az eredeti tulajdonosoknak. Ők majd eldöntik, hogy kell - e nekik a változtatásod, vagy nem. Ha tetszik nekik, akkor merge-elik a saját repojuk masterébe a branched, és mindenki boldog!
 
 #### Issue-k
 
-Egy nagy projektben mindig lesznek h
+Egy nagy projektben mindig lesznek hibák, ezekre lehet felhívni a figyelmet az "Issues" fülön. Nem csak a saját projektjeink Issue-it érdemes ismerni: lehet, hogy találkozunk valami olyasmivel, amit meg tudunk javítani, akkor forkoljuk, megcsináljuk, és onnantól végtelen jó karma és hírnév az osztályrészünk bárhol.
