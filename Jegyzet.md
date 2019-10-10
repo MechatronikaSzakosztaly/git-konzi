@@ -439,14 +439,22 @@ Ha van jogosultságunk, pusholhatjuk a reponkat a többieknek is: ilyenkor kerü
 $ git push
 ```
 
-Frissítés után meg is jelent egy 
+Frissítés után meg is jelent egy új branch a repoban: ebben már ott vannak a saját változtatásaink.
+
+#### Pull requestek, majd merge
+
+Ha úgy érezzük, hogy a branch "production ready", egy **Pull request**-el jelezhetjük a többiek felé, hogy nézegessék meg ők is. A Pull requestet felülvizsgálva merge-elhetjük is a master ággal a kódunkat (igazából, ha van jogosultságunk, ezt megthehetjük egyből a többiek megkérdezése nélkül is, de az otrombaság lenne. Érdemes minden munkacsoportban kinevezni egy "merge mastert", aki egyedül merge-el és vizsgálgat.)
+
+### Munka nagy open source projekteken
+
+Láttunk, hogy csapatban együtt dolgozva mindenki merge-elhet, akinek csak kedve támad. Ez egy nagy open source projekten, amin programozók sokasága dolgozik együtt a világ minden tájáról, nem túl célravezető. Kicsit más tehát a workflow, ha nem rendelkezünk jogokkal a repohoz, de így is hozzá tudunk járulni a munkához.
+
+#### Fork
+
+Ahhoz, hogy egy nyílt forráskódú projekttel szabadon játszhassuk, forkolnunk kell a projekt repo-ját. A forkolás lehetővé teszi, hogy úgy commitolgassunk, hogy az ne jelenjen meg az eredeti projektben. Ilyenkor egyedül összerakjuk a dolgokat, majd egy pull reqestet küldönk az eredeti repo tulajának, aki eldönthati, hogy használja-e a kódunkat, és mergel, vagy nem. Ha rányomtok a Forkra, megjelenik a saját GitHub oldalatokon is a projekt. asdasd
 
 
 
+#### Issue-k
 
-
-
-
-### Pull
-
-### Push
+Egy nagy projektben mindig lesznek h
