@@ -439,6 +439,7 @@ Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlo
 
 ```bash
 $ git branch sajatFixem
+$ git checkout sajatFixem
 ```
 
  A verziókövető figyelni fog minket; ha menteni szeretnénk a változtatásainkat egy commitba, ugyanúgy kell eljárnunk, mint a helyi repoknál:
