@@ -427,11 +427,18 @@ $ git pull
 
 #### Push
 
-A saját változtatásaink szikronizálását a **push** parancs végzi. A lokális águnkat merge-eli az upstream ágba, így a változtatásaink megjelennek az upstreamben is. Ha az upstreamben még nem létezik az ág, amit push-olunk, automatikusan készül egy.
+A saját változtatásaink szikronizálását a **push** parancs végzi. A lokális águnkat merge-eli az upstream ágba, így a változtatásaink megjelennek az upstreamben is. 
 
 ```bash
 $ git push
 ```
+
+Ha az upstreamben még nem létezik az ág, amit push-olunk, a git felajánlja hogy készít egyet:
+
+```bash
+$ git push --set-upstream origin <branch-neve>
+```
+
 
 #### Munka a letöltött fájlokon
 
