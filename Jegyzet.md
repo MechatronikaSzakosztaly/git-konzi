@@ -415,10 +415,33 @@ $ git clone https://github.com/user/repo.git
 ```
 
 
-Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlok másolatát. El is kezdhetünk dolgozni! Előtte érdemes megcsinálni a branchot, ami a változtatásainkat tartalmazni fogja.
+Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlok másolatát egy új mappán belül, aminek a neve megegyezik a repo-val. El is kezdhetünk dolgozni! Előtte érdemes megcsinálni a branchot, ami a változtatásainkat tartalmazni fogja.
+
+```bash
+$ git branch sajatFixem
+```
+
+ A verziókövető figyelni fog minket; ha menteni szeretnénk a változtatásainkat egy commitba, ugyanúgy kell eljárnunk, mint a helyi repoknál:
+
+```bash
+$ git add .
+```
+
+Ha sikerült valami szépet alkotnunk, commitelhetjük is.
+
+```bash
+$ git commit -m "Megjavítottam ezt, elrontottam azt"
+```
+
+Ha van jogosultságunk, pusholhatjuk a reponkat a többieknek is: ilyenkor kerül föl a közös oldalra a branchünk. Felugrik majd egy ablak, hogy elkérje a GitHub accod és a jelszavad. Miután megadtad, látogasd meg a repo GitHub oldalát, amihez feltöltötted a változtatásaidat, és frissíts egyet!
+
+```bash
+$ git push
+```
+
+Frissítés után meg is jelent egy 
 
 
- A verziókövető figyelni fog minket; ha menteni szeretnénk a vál
 
 
 
