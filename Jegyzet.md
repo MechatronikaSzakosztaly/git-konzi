@@ -389,9 +389,15 @@ A merge után a mellékág nem törlödik, tovább használható.
 
 ## Távoli repository használata
 
-GitHub és GitLab
+Nem mindig egyedül dolgozunk a projektjeinken, így jó, ha olyan helyeken is tarthatunk repositorykat, ahol többen is elérik, nézegethetik. Erre több eszköz is van: a legelterjedtebb a [GitHub](https://github.com/) - ez nyílt forráskódú projektekre (a.k.a bárki megnézheti és lenyúlhatja) ingyenes, de privát repositorykra is ad lehetőséget. Nagy cégek (IBM, Sony, Szpészex) használják az ukrán fizetős eszközt, a [GitLabot](https://about.gitlab.com/). 5 contributorig ingyenes orivát repokat kínál a [BitBucket](https://bitbucket.org/).
 
-### Origin beállítása
+Kétféleképpen lehet használni ezeket: dolgozhattok egy olyan csapattal, akiket ismertek - mint egy kis cég, vagy közös hobbiprojekt - vagy lehettek tagjai egy népes, az egész világról verbuválódott open source közösségnek is. Mind a kettő nagyon egyszerű, ezeken fogunk végighaladni, a GitHubot használva.
+
+### Csapatos munka a GitHubon
+
+Amikor csapatban dolgozunk, akkor mindenki rendelkezik olyan jogokkal, ami lehetővé teszi, hogy úgy kezeld a repositoryt, mintha a sajátod lenne. Tegyük fel, hogy egy projektbe szeretnénk bekapcsolódni, de nem mi kezdtük el írni, úgyhogy szeretnénk először letölteni az eddigi fájlokat. Azért, hogy követni tudjuk a többiek változtatásait is, ne csak a sajátjainkat, nem elég letölteni: meg is kell adni, hogy
+
+#### Clone
 
 ```bash
 $ git remote add origin https://github.com/user/repo.git
