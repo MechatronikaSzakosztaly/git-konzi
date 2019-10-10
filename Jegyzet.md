@@ -397,9 +397,17 @@ Kétféleképpen lehet használni ezeket: dolgozhattok egy olyan csapattal, akik
 
 Amikor csapatban dolgozunk, akkor mindenki rendelkezik olyan jogokkal, ami lehetővé teszi, hogy úgy kezeld a repositoryt, mintha a sajátod lenne. Tegyük fel, hogy egy projektbe szeretnénk bekapcsolódni, de nem mi kezdtük el írni, úgyhogy szeretnénk először letölteni az eddigi fájlokat. Azért, hogy követni tudjuk a többiek változtatásait is, és szinkronizálni tudjuk a sajátjainkat, nem elég letölteni: meg is kell adni, hogy melyik repo-val dolgozunk. Ezt nevezi a git upstream branchnak. 
 
+#### Clone
+
+Ahhoz, hogy belekezdjünk a munkába, meg kell szereznünk a repot, git initelnünk kell, össze kell kötnünk a távoli repo-val a gépünkön lévőt. Ez külön-külön hosszú lenne, de szerencsére vagy parancs, a **Git clone**, amivel egyben megoldhatjátok:
+
+```bash
+$ git clone https://github.com/user/repo.git
+```
+
 #### Add remote, add upstream
 
-"cd"-zzetek be a repo mappájába, és ott mondjátok meg a gitnek, hogy csináljon nektek egy új repo-t, majd adjátok meg a repo URL-jét (ezt a github Clone/Download fülén találhatjátok meg).
+Ha megvannak a fájlok, de nem clone-al szereztétek meg őket, másféleképpen kell összekötni őket a GitHubon tárolt verzióval: "cd"-zzetek be a repo mappájába, és ott mondjátok meg a gitnek, hogy csináljon nektek egy új repo-t, majd adjátok meg a repo URL-jét (ezt a github Clone/Download fülén találhatjátok meg).
 
 ```bash
 $ git init
@@ -407,13 +415,10 @@ $ git remote add origin https://github.com/user/repo.git
 $ git push -u origin master
 $ git remote add origin https://github.com/user/repo.git
 ```
-Mostmár tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne. De a fájlok még nincsenek meg! A Clone parancs szedi össze őket nekünk.
+Mostmár tudja a git, hogy hova mentse majd a változtatásaitokat, és honnan szinkronizálja a repot, ha más ügyködne benne.
 
-#### Clone
-```bash
-$ git clone https://github.com/user/repo.git
-```
 
+#### Munka a letöltött fájlokon
 
 Ha most megnézzük a mappánkat, megtaláljuk benne a GitHubon szereplő fájlok másolatát egy új mappán belül, aminek a neve megegyezik a repo-val. El is kezdhetünk dolgozni! Előtte érdemes megcsinálni a branchot, ami a változtatásainkat tartalmazni fogja.
 
@@ -440,6 +445,14 @@ $ git push
 ```
 
 Frissítés után meg is jelent egy új branch a repoban: ebben már ott vannak a saját változtatásaink.
+
+#### Pull
+
+Ha a branchünkben valamit frissíteni szeretnénk egy másik branchből, akkor használhatjuk a **pull** parancsot. Ez megkeresi az eltéréseket, és automatikusan merge-eli a két ágat. Ezt megtehetjük akkor, ha valami hozzájárult a masterhez, így megváltozott a mi  a GitHubon tárolt verzió, de a miénk nem. 
+
+```bash
+$ git pull https://github.com/user/repo.git
+```
 
 #### Pull requestek, majd merge
 
