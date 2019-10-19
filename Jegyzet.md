@@ -89,6 +89,22 @@ Ezen fő ág mellett létrehozhatunk egy leágazást, egy alternatív verziót. 
 A---B---C---D---E---F master
 ```
 
+#### Környezetek
+
+A git három környezetre épül.
+
+```
++-----------+       +---------+          +------------+
+|  Working  |       | Staging |          | Repository |
+| Directory | add-> | (Index) | commit-> |            |
++-----------+       +---------+          +------------+
+```
+
+A **Working Directory** (Working Tree) a számítógépen pillanatnyilag látható fájlokat jelenti. Ezeken dolgozhatsz, ezek vannak megnyitva a szövegszerkesztőkben.
+
+A **Staging** (Index) a következő commithoz (mentéshez) gyűjti a fájlokat. A fájlok indexhez adásakor azoknak pillanatnyi állapota kerül az indexbe. A commit az ide félrerakott fájlokat menti el a repository-ba.
+
+A **Repository** a git adatbázisa. A commitok ide kerülnek mentésre. Tartalmazza az összes változtatás történetét. Bármelyik commit visszatölthető belőle.
 
 ## Használat
 
